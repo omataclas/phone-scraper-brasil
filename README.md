@@ -1,4 +1,4 @@
-Python email address and phone number scraper by Cameron Cobb on October 17th, 2018.
+Python email address and phone number scraper
 
 This email address and phone number scraper prompts the user to enter the complete URL 
 of the webpage that needs to be scraped and stored the email addresses in an excel spreadsheet.
@@ -15,4 +15,3 @@ requests
 openpyxl  
 datetime
 
-If you have questions or want to contact me, visit my website https://www.cameroncobbconsulting.com
