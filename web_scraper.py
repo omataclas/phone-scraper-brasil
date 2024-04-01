@@ -28,11 +28,11 @@ def start_scrape(page, name_the_file):
     scrape = BeautifulSoup(page, 'html.parser')
     scrape = scrape.get_text()
     
-    phone_numbers = set(re.findall(r"((?:\d{3}|\(\d{3}\))?(?:\s|-|\.)?\d{3}(?:\s|-|\.)\d{4})", scrape)) #"set" removes duplicates
+    phone_numbers = set(re.findall(r"(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})", scrape)) #"set" removes duplicates
 
     nodupnumber = len(list(phone_numbers))
 
-    dupnumber = len(list(re.findall(r"((?:\d{3}|\(\d{3}\))?(?:\s|-|\.)?\d{3}(?:\s|-|\.)\d{4})", scrape))) 
+    dupnumber = len(list(re.findall(r"(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})", scrape))) 
 
     number_of_dup_number = int(dupnumber) - int(nodupnumber) 
 
